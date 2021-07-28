@@ -1,3 +1,4 @@
+# install package requirements from setup.py
 -e .
 # pip freeze -r requirements-dev.txt
 bumpversion

@@ -1,5 +1,4 @@
-* pytest-image-diff version:
-* Django version:
+* {python-library-template} version:
 * Python version:
 * Operating System:
 

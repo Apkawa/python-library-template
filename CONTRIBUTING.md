@@ -44,7 +44,7 @@ For pycharm needs install `tox` to global
 ## Docs
 
 ```shell
-pip install -r requirements.txt
+pip install -r requirements-dev.txt
 cd docs
 make html
 ```
