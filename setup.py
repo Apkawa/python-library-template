@@ -7,6 +7,7 @@ from setuptools import setup, find_packages
 version = '0.0.0'
 
 if sys.argv[-1] == 'publish':
+    # For initial publishing
     try:
         import wheel
 
@@ -56,7 +57,7 @@ setup(
     ],
     zip_safe=False,
     include_package_data=True,
-    keywords=['django'],
+    keywords=[],
     license='MIT',
     classifiers=[
         # https://pypi.org/classifiers/
@@ -65,11 +66,13 @@ setup(
         'Environment :: Web Environment',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python',
+        'Programming Language :: Python :: 3 :: Only',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
         'Programming Language :: Python :: 3.10',
+        # 'Programming Language :: Python :: Implementation :: PyPy',
     ],
 )

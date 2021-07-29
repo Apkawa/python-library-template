@@ -21,13 +21,12 @@ jobs:
           - toxenv: type
             python-version: 3.7
             experimental: false
-          - toxenv: splinter
-            experimental: false
-            python-version: 3.7
-          - experimental: true
-            python-version: "3.10.0-beta.2 - 3.10"
-          - experimental: true
-            python-version: "pypy-3.7"
+
+          - python-version: "3.10.0-beta.2 - 3.10"
+            experimental: true
+
+#          - python-version: "pypy-3.7"
+#            experimental: true
 
 
     continue-on-error: ${{ matrix.experimental }}
@@ -77,7 +76,9 @@ jobs:
           --outdir dist/
 
       - name: Publish distribution to Test PyPI
-        if: github.ref == 'refs/heads/master' and secrets.TEST_PYPI_API_TOKEN
+        env:
+          TEST_PYPI_API_TOKEN: ${{ secrets.TEST_PYPI_API_TOKEN }}
+        if: github.ref == 'refs/heads/master' && env.TEST_PYPI_API_TOKEN != null
         uses: pypa/gh-action-pypi-publish@master
         with:
           skip_existing: true
