@@ -1,4 +1,4 @@
-* {python-library-template} version:
+* __python-library-template__ version:
 * Python version:
 * Operating System:
 

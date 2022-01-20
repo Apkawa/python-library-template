@@ -33,7 +33,7 @@ tox -e qa
 Install git hook
 
 ```shell
-pip install -r requirements.txt
+pip install -r requirements-dev.txt
 
 pre-commit install
 ```

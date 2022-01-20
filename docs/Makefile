@@ -4,7 +4,7 @@
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
-SPHINXPROJ    = {python-library-template}
+SPHINXPROJ    = __python-library-template__
 SOURCEDIR     = source
 BUILDDIR      = build
 

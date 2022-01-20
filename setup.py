@@ -32,8 +32,8 @@ if sys.argv[1] == 'bumpversion':
 
 __doc__ = ""
 
-project_name = '{python-library-template}'
-app_name = '{example_library}'
+project_name = '__python-library-template__'
+app_name = '__example_library__'
 
 ROOT = os.path.dirname(__file__)
 
@@ -43,7 +43,7 @@ def read(fname):
 
 
 setup(
-    name=project_name,
+    name=project_name.replace("__", ''),
     version=version,
     description=__doc__,
     long_description=read('README.md'),
@@ -68,7 +68,6 @@ setup(
         'Programming Language :: Python',
         'Programming Language :: Python :: 3 :: Only',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
